@@ -1,0 +1,5 @@
+LIBRARY  "Freed.dll"
+EXPORTS
+Freed_Init
+Freed_SendD1Msg
+Freed_Close
