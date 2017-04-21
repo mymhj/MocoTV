@@ -1,0 +1,4 @@
+﻿1>------ 已启动生成:  项目: GPothka.MainWin, 配置: Release Win32 ------
+1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+1>  GPothka.MainWin.vcxproj -> E:\03Moco-TV\01项目过程\code\1.0\TESTCODE\001\GPothka.MainWin\..\Release\GPothka.MainWin_R.exe
+========== 生成:  成功 1 个，失败 0 个，最新 0 个，跳过 0 个 ==========
