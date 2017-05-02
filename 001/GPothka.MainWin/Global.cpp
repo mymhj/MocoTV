@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+
+///中国
 //整体速度基准
 float gWholeSpeed=0.3;/////1.0
 //摇杆控制末端速度
