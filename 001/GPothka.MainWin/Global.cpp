@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 //整体速度基准
-float gWholeSpeed=0.3;//1.0
+float gWholeSpeed=0.3;/////1.0
 //摇杆控制末端速度
 float sWholeSpeed = 0.3;
 //摇杆控制轨道速度
