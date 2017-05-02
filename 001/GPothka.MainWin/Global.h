@@ -8,7 +8,7 @@
 #define WM_USERLOGGRR WM_USER+2000
 #define JOYRANGMAX 1200  //摇杆轴范围最大值
 #define JOYRANGMIN -1200 //摇杆轴范围最小值
-#define JOYAXSISTEP 1200 //摇杆轴最小分区，对应机器人最小步长。
+#define JOYAXSISTEP 1200 //摇杆轴最小分区，对应机器人最小步长  ///。
 #define AXSTEP  0.001;
 
 
