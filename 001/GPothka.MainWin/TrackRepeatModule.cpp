@@ -999,6 +999,8 @@ vector<robotRunCommand> CTrackRepeatModule::CalculateCommandFrameFromTwoKeyFrame
 		maxFrame = 1;
 	}
 
+
+    //my:计算每一帧的步长，如果maxframe值为零，那么就认为两个帧在同一个位置。目前是把当前帧变为1了，其实此时函数可以返回了。
 	double A1Step = absA1 / maxFrame<0.00001 ? 0.0000 : absA1 / maxFrame;
 	double A2Step = absA2 / maxFrame<0.00001 ? 0.0000 : absA2 / maxFrame;
 	double A3Step = absA3 / maxFrame<0.00001 ? 0.0000 : absA3 / maxFrame;
@@ -1007,6 +1009,8 @@ vector<robotRunCommand> CTrackRepeatModule::CalculateCommandFrameFromTwoKeyFrame
 	double A6Step = absA6 / maxFrame<0.00001 ? 0.0000 : absA6 / maxFrame;
 	double E1Step = absE1 / maxFrame<0.0001 ? 0.0000 : absE1 / maxFrame;
 
+
+	//my:此处主要用来做缓冲区处理。
 	//计算与上一帧步长的差
 	double diffStepE1 = E1Step*signE1 - lastE1Step;
 	double diffStepA1 = A1Step*signA1 - lastA1Step;
@@ -1016,6 +1020,8 @@ vector<robotRunCommand> CTrackRepeatModule::CalculateCommandFrameFromTwoKeyFrame
 	double diffStepA5 = A5Step*signA5 - lastA5Step;
 	double diffStepA6 = A6Step*signA6 - lastA6Step;
 
+
+	//my:寻找最大步长差。是哪一个轴。目前的算法，结果基本都为E1轴。
 	//计算最大步长差
 	double maxStep = 0;
 	double stepValue[7];
@@ -1035,6 +1041,7 @@ vector<robotRunCommand> CTrackRepeatModule::CalculateCommandFrameFromTwoKeyFrame
 		}
 	}
 
+	//my:两帧在同一个位置。
 	if (maxStep == 0)
 	{
 		maxStep = 0.001;
